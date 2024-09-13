@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIRD Army Recruitment</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+    <!-- Header Section -->
+    <header class=" p-4 shadow-lg fixed w-full z-50 glass-background">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="logo.png" alt="Бригада Рубіж" class="h-10 mr-4">
+                <h1 class="text-4xl font-extrabold text-gold">HIRD</h1>
+            </div>
+            <nav>
+                <ul class="flex items-center space-x-4">
+                    <li><a href="#about" class="text-gray-400 hover:text-gold transition duration-300 font-semibold">Про
+                            нас</a></li>
+                    <li><a href="#history"
+                            class="text-gray-400 hover:text-gold transition duration-300 font-semibold">Історія</a>
+                    </li>
+                    <li><a href="#units"
+                            class="text-gray-400 hover:text-gold transition duration-300 font-semibold">Підрозділи</a>
+                    </li>
+                    <li><a href="#vacancies"
+                            class="text-gray-400 hover:text-gold transition duration-300 font-semibold">Вакансії</a>
+                    </li>
+                    <li><a href="#contact"
+                            class="text-gray-400 hover:text-gold transition duration-300 font-semibold">Контакти</a>
+                    </li>
+                </ul>
+
+            </nav>
+            <a href="https://rubizh.com/"
+                class="text-gray-400 hover:text-gold transition duration-300 font-semibold rubizh-logo"><img
+                    src="./meterials/logos/BROPP.png" alt="rubizh-logo" width="50px" height="50px"></a>
+        </div>
+    </header>
+
+    <!-- Hero Section with Background Video -->
+    <section class="hero-section relative h-screen" style="border-bottom: 1rem rgba(17,24,39,var(--tw-bg-opacity)) solid;">
+        <!-- Фонове відео -->
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="./GX010016.MP4" type="video/mp4">
+            Ваш браузер не підтримує відео тег.
+        </video>
+
+        <!-- Напівпрозорий чорний шар для блюру -->
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+
+        <!-- Контент поверх відео -->
+        <div
+            class="container mx-auto h-full flex flex-col justify-center items-center text-center relative z-10 banner-text">
+            <h2 class="text-5xl md:text-7xl font-bold text-gold-blur leading-tight h2-text drop-shadow-md">
+                <span>Приєднуйся</span> <span>до</span> <span>HIRD</span>
+            </h2>
+            <p class="mt-4 text-2xl">2 батальйон оперативного призначення</p>
+            <p class="mt-4 text-2xl">Бригади “Рубіж” Національної гвардії України</p>
+            <a href="https://forms.gle/jBt5FB63GMxcthiw7"
+                class="mt-8 inline-block text-black px-8 py-4 rounded-full text-xl font-semibold shadow-lg glass-background_button">Заповнити
+                анкету</a>
+        </div>
+    </section>
+
+
+    <!-- Parallax Section -->
+    <section class="parallax-section bg-fixed bg-cover bg-center h-64"
+        style="background-image: url('./meterials/foto/IMG_5884 copy.jpg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto h-full flex justify-center items-center text-center relative z-10">
+            <h3 class="text-3xl font-bold text-white">Свій до свого!</h3>
+        </div>
+    </section>
+
+    <!-- About Section with Background Video -->
+    <section id="about" class="relative container mx-auto py-24 px-4 glass-background_video"
+        style="padding-top: 6rem; border: none">
+        <!-- Напівпрозорий чорний шар для блюру -->
+        <div class="absolute inset-0 bg-black opacity-60 backdrop-filter blur-lg z-10"></div>
+
+        <!-- Контент поверх відео -->
+        <div class="relative z-20">
+            <h2 class="text-4xl font-bold mb-8 text-center text-gold">Про нас</h2>
+
+            <!-- Перший блок тексту -->
+            <div class="text-lg leading-relaxed mb-6 text-white" id="first-block">
+                <p>
+                    <br>
+                    HIRD - військове формування та спільнота товаришів по зброї.
+                    <br>
+                    В епоху вікінгів Хірд об'єднував найдосвідченіших та перевірених бійців - бойових побратимів
+                    ватажка. У перекладі з давньоанглійської слово “hird” означає “сім’я”. Хірдмани - воїни, які
+                    приєднувалися до хірду, ставали частиною єдиної родини. Вони присягали на вірність командиру,
+                    трималися одне одного у війні та мирному житті, дотримувалися принципів відданості та честі. В
+                    середні віки хірд складав ядро армії вікінгів - як під час оборони так і в завойовницьких походах.
+                    <br>
+                    Ми віримо, що принципи хірдманів також є ефективними у сучасній визвольній війні. Наші цінності -
+                    вірність Україні та відданість своєму командиру і побратимам. Наш спосіб дій - професіонально
+                    працювати разом для перемоги.
+
+                </p>
+            </div>
+
+            <!-- Image Slider -->
+            <div class="image-slider max-w-full overflow-hidden mt-8">
+                <div><img src="./meterials/foto/IMG_6217.jpg" alt="About Image 1" class="w-full h-full object-cover">
+                </div>
+                <div><img src="./meterials/foto/IMG_8365.jpg" alt="About Image 2" class="w-full h-full object-cover">
+                </div>
+                <div><img src="./meterials/foto/IMG_6605.jpg" alt="About Image 3" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Другий блок тексту у дві колонки -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 opacity-0" id="second-block">
+                <div class="text-lg leading-relaxed text-white">
+                    <p>
+                        <span class="text-center">БОЙОВИЙ ШЛЯХ</span>
+                        <br>
+                        2 батальйон оперативного призначення HIRD входить до складу Бригади швидкого реагування
+                        Національної гвардії України «Рубіж» - першоЇ в Україні бригади заснованої створеної за
+                        стандартами НАТО.
+                        <br>
+                        2 батальйон оперативного призначення був створений у 2015 році. Виконував бойові завдання в АТО
+                        і ООС. Бійці підрозділу тримали героїчну оборону Рубіжного, Сєвєродонецька, Бахмута, Курдюмівки,
+                        Кліщіївки.
+                        <br>
+                        Повномасштабне вторгнення зустріли на Донбасі. Брали участь у звільненні Новоселівки, Дробишево,
+                        Святогірська.
+                        <br>
+                        У січні-серпні 2024 року виконували бойові завдання на Лимано-Куп’янському напрямку на
+                        Донеччині. Відбили понад 20 штурмів противника.
+                        <br>
+                        Під час масових російських штурмів на початку травня 2024 року батальйон не втратив жодної
+                        позиції, знищив велику кількість особового складу та бронетехніки противника, взяв у полон
+                        десятки російських військових.
+                    </p>
+                </div>
+                <div class="text-lg leading-relaxed text-white">
+                    <p>
+                        <span class="text-center">Управління батальйону</span>
+                        <br>
+                        Бойові офіцери які пройшли всі ланки військової служби і безпосередньо
+                        приймали участь у боях що нівелює розрив розуміння між особовим складом і командирами при
+                        виконанні завдань.
+                        <br>
+                        Командир батальйону підполковник Дмитро Лисенко - досвідчений офіцер, який воює з 2014 року
+                        <br>
+                        “При стрімкому технологічному розвитку війни - ми теж розвиваємось, постійно нарощуючи
+                        можливості. Наші підрозділи вже мають власні напрацювання, які дають відмінний результат на полі
+                        бою. Військова справа - це постійне широке вдосконалення і наполеглива праця злагодженого
+                        колективу. Якщо ти вважаєш так само - чекаємо в наших рядах.”
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Units Section -->
+    <section id="units" class="container mx-auto py-24 px-4"
+        style="background-image: url('./meterials/_MG_0468.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+        <h2 class="text-4xl font-bold mb-8 text-center text-gold">Підрозділи</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="unit-card glass-background p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold text-gold mb-2">Піхота</h3>
+                <p>Основна ударна сила батальйону, оснащена сучасною зброєю та амуніцією.</p>
+            </div>
+            <div class="unit-card glass-background p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold text-gold mb-2">Розвідка</h3>
+                <p>Проведення розвідки та збору інформації про противника.</p>
+            </div>
+            <div class="unit-card glass-background p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold text-gold mb-2">БПЛА</h3>
+                <p>Аеророзвідка та підтримка наземних операцій.</p>
+            </div>
+            <div class="unit-card glass-background p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold text-gold mb-2">Рота вогневої підтримки</h3>
+                <p>Забезпечення вогневої підтримки для основних підрозділів батальйону.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vacancies Section -->
+    <section id="vacancies" class="bg-gray-800 py-24 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-gold mb-8">Вакансії</h2>
+            <p class="text-lg text-center mb-8">Приєднуйся до 2 батальйону оперативного призначення HIRD Бригади "Рубіж"
+                НГУ! Заповнюй анкету, обирай свою роль та стань частиною родини.</p>
+            <div class="text-center">
+                <a href="https://forms.gle/gD2p6KH4rJXoLZwj6"
+                    class="mt-8 inline-block  text-black px-8 py-4 rounded-full text-xl font-semibold  shadow-lg glass-background_button">Заповнити
+                    анкету</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section with Parallax Effect -->
+    <section id="history" class="py-24" style="padding-top: 0; border: none">
+        <div class="bg-black bg-opacity-70 p-8 rounded-lg">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-gold mb-4">Історія</h2>
+                <p class="text-lg leading-relaxed text-white">
+                    2 батальйон оперативного призначення HIRD входить до складу Бригади швидкого реагування Національної
+                    гвардії України «Рубіж»...
+                </p>
+                <!-- Video Section -->
+                <div class="mt-8" style="display: flex; justify-content: center; align-items: center;">
+                    <iframe style="height: 70vh; aspect-ratio: 3 / 2; width: auto;" class="w-full rounded-lg"
+                        width="1263" height="480" src="https://www.youtube.com/embed/9hFlcOwTN08"
+                        title="7 місяців ЖОРСТОКОЇ ОБОРОНИ на Луганщині, ротація батальйону HIRD" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mx-auto py-24 px-4" style="padding-top: 0;">
+        <h2 class="text-4xl font-bold mb-8 text-center text-gold">Контакти</h2>
+        <div class="text-center">
+            <p>Instagram: <a href="https://www.instagram.com/2bop_bshr/" class="text-gold hover:underline">2bop_bshr</a>
+            </p>
+            <p>Facebook: <a href="https://www.facebook.com/2bopRapidReactionBrigade/"
+                    class="text-gold hover:underline">2bopRapidReactionBrigade</a></p>
+            <p>Email: <a href="mailto:2bop.rrb@gmail.com" class="text-gold hover:underline">2bop.rrb@gmail.com</a></p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-black py-6">
+        <div class="container mx-auto text-center">
+            <p class="text-sm text-gray-600">© 2024 HIRD. Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <!-- Підключення бібліотеки Slick Slider у нижній частині HTML, перед закриттям тега body -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.image-slider').slick({
+                autoplay: true,      // Автоматичне прокручування
+                autoplaySpeed: 3000, // Швидкість автоплей в мілісекундах
+                dots: false,         // Відключити показ індикаторів
+                arrows: false,       // Відключити стрілки
+                swipe: true,         // Дозволити протягування
+                adaptiveHeight: false // Вимкнено, щоб використовувати однакову висоту
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
