@@ -30,11 +30,12 @@
                 <ul class="flex items-center space-x-4">
                     <li><a href="#about" class="text-gray-400 hover:text-gold transition duration-300 font-semibold">Про
                             нас</a></li>
-                    <li><a href="#history"
-                            class="text-gray-400 hover:text-gold transition duration-300 font-semibold">Історія</a>
-                    </li>
                     <li><a href="#units"
                             class="text-gray-400 hover:text-gold transition duration-300 font-semibold">Підрозділи</a>
+                    </li>
+
+                    <li><a href="#history"
+                            class="text-gray-400 hover:text-gold transition duration-300 font-semibold">Історія</a>
                     </li>
                     <li><a href="#vacancies"
                             class="text-gray-400 hover:text-gold transition duration-300 font-semibold">Вакансії</a>
@@ -52,10 +53,10 @@
     </header>
 
     <!-- Hero Section with Background Video -->
-    <section class="hero-section relative h-screen" style="border-bottom: 1rem rgba(17,24,39,var(--tw-bg-opacity)) solid;">
+    <section class="hero-section relative h-screen">
         <!-- Фонове відео -->
         <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
-            <source src="./GX010016.MP4" type="video/mp4">
+            <source src="./GX010016.webm" type="video/mp4">
             Ваш браузер не підтримує відео тег.
         </video>
 
@@ -77,18 +78,11 @@
     </section>
 
 
-    <!-- Parallax Section -->
-    <section class="parallax-section bg-fixed bg-cover bg-center h-64"
-        style="background-image: url('./meterials/foto/IMG_5884 copy.jpg');">
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="container mx-auto h-full flex justify-center items-center text-center relative z-10">
-            <h3 class="text-3xl font-bold text-white">Свій до свого!</h3>
-        </div>
-    </section>
+
 
     <!-- About Section with Background Video -->
     <section id="about" class="relative container mx-auto py-24 px-4 glass-background_video"
-        style="padding-top: 6rem; border: none">
+        style="padding-top: 6rem; margin-bottom: 0.5rem; border: none">
         <!-- Напівпрозорий чорний шар для блюру -->
         <div class="absolute inset-0 bg-black opacity-60 backdrop-filter blur-lg z-10"></div>
 
@@ -171,6 +165,14 @@
         </div>
     </section>
 
+    <!-- Parallax Section -->
+    <section class="parallax-section bg-fixed bg-cover bg-center h-64"
+        style="background-image: url('./meterials/foto/IMG_5884 copy.jpg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto h-full flex justify-center items-center text-center relative z-10">
+            <h3 class="text-3xl font-bold text-white">Свій до свого!</h3>
+        </div>
+    </section>
 
     <!-- Units Section -->
     <section id="units" class="container mx-auto py-24 px-4"

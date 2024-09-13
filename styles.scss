@@ -242,7 +242,8 @@ button,
     }
 }
 #units {
-    border-radius:  0 0 15px 15px;
+    border-radius:  15px;
+    margin-top: 0.6rem;
     margin-bottom: 0.6rem;
 }
 .image-slider {
@@ -263,7 +264,7 @@ button,
 }
 
 #about {
-    border-radius: 15px 15px 0 0;
+    border-radius: 15px;
     margin-top: 10px;
     .absolute {
         border-radius: 15px;
