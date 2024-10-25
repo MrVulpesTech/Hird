@@ -1,7 +1,8 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
 body {
-  background-color: #000000;
+  background-color: #333a48;
   color: #FFFFFF;
   line-height: 1.6;
   margin: 0;
@@ -13,8 +14,10 @@ body {
 }
 
 body::-webkit-scrollbar-track {
-  backdrop-filter: blur(2px); /* Ефект блюру */
-  -webkit-backdrop-filter: blur(2px); /* Для підтримки в Safari */
+  backdrop-filter: blur(2px);
+  /* Ефект блюру */
+  -webkit-backdrop-filter: blur(2px);
+  /* Для підтримки в Safari */
   border: 1px solid rgba(255, 255, 255, 0.1);
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
   background-color: #232323;
@@ -38,6 +41,34 @@ h4 {
   color: #C69749;
 }
 
+#videoPopup {
+  z-index: 1000;
+}
+
+#popupVideo {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#mobileMenu>ul {
+  padding-top: 10vh !important;
+  margin-bottom: 10vh !important;
+  background-color: black;
+  height: 100vh;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: -10vh !important;
+  box-sizing: content-box;
+}
+
+.slider_image {
+  aspect-ratio: 7/4;
+}
+
+#closePopup {
+  cursor: pointer;
+}
+
 a {
   color: #C69749;
   text-decoration: none;
@@ -57,6 +88,7 @@ a {
     transform: scale(1);
   }
 }
+
 .h2-text span {
   display: inline-block;
   opacity: 0;
@@ -81,9 +113,13 @@ a {
     filter: blur(0);
   }
 }
+
 header {
-  border-radius: 0 0 15px 15px; /* Заокруглені кути (опціонально) */
+  border-radius: 0 0 15px 15px;
+  /* Заокруглені кути (опціонально) */
 }
+
+
 
 .hero-section {
   height: 100vh;
@@ -109,14 +145,14 @@ header {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   z-index: 0;
 }
 
 .hero-section .absolute {
   z-index: 1;
   -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .hero-section .container {
@@ -125,37 +161,53 @@ header {
 }
 
 .glass-background {
-  background: rgba(0, 0, 0, 0.2); /* Напівпрозорий чорний фон */
-  backdrop-filter: blur(10px); /* Ефект блюру */
-  -webkit-backdrop-filter: blur(10px); /* Для підтримки в Safari */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Тонка рамка (опціонально) */
+  background: rgba(0, 0, 0, 0.2);
+  /* Напівпрозорий чорний фон */
+  backdrop-filter: blur(10px);
+  /* Ефект блюру */
+  -webkit-backdrop-filter: blur(10px);
+  /* Для підтримки в Safari */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Тонка рамка (опціонально) */
 }
 
 .glass-background_video {
-  background: rgba(0, 0, 0, 0.5); /* Напівпрозорий чорний фон */
-  backdrop-filter: blur(10px); /* Ефект блюру */
-  -webkit-backdrop-filter: blur(10px); /* Для підтримки в Safari */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Тонка рамка (опціонально) */
+  background: rgba(0, 0, 0, 0.5);
+  /* Напівпрозорий чорний фон */
+  backdrop-filter: blur(10px);
+  /* Ефект блюру */
+  -webkit-backdrop-filter: blur(10px);
+  /* Для підтримки в Safari */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Тонка рамка (опціонально) */
 }
 
 .glass-background_button {
-  background: rgba(0, 0, 0, 0.2); /* Напівпрозорий чорний фон */
-  backdrop-filter: blur(2px); /* Ефект блюру */
-  -webkit-backdrop-filter: blur(2px); /* Для підтримки в Safari */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Тонка рамка (опціонально) */
-  border-radius: 15px; /* Заокруглені кути (опціонально) */
+  background: rgba(0, 0, 0, 0.2);
+  /* Напівпрозорий чорний фон */
+  backdrop-filter: blur(2px);
+  /* Ефект блюру */
+  -webkit-backdrop-filter: blur(2px);
+  /* Для підтримки в Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* Тонка рамка (опціонально) */
+  border-radius: 15px;
+  /* Заокруглені кути (опціонально) */
   transition: ease-in 300ms;
   color: #FFFFFF;
 }
+
 .glass-background_button:hover {
-  backdrop-filter: blur(5px); /* Ефект блюру */
+  backdrop-filter: blur(5px);
+  /* Ефект блюру */
   -webkit-backdrop-filter: blur(5px);
   background: rgba(0, 0, 0, 0.4);
   transform: scale(1.02);
 }
 
 .text-outline {
-  color: white; /* Основний колір тексту */
+  color: white;
+  /* Основний колір тексту */
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
@@ -166,9 +218,11 @@ header {
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .parallax-section .bg-opacity-50 {
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 .parallax-section h3 {
   color: #FFFFFF;
   font-weight: bold;
@@ -191,6 +245,7 @@ header {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .unit-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
@@ -202,11 +257,13 @@ header {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 #second-block {
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
@@ -228,6 +285,7 @@ button,
   transition: background-color 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 button:hover,
 .btn:hover {
   background-color: #d2ad70;
@@ -242,12 +300,11 @@ button:hover,
 .image-slider {
   margin-top: 20px;
 }
+
 .image-slider .slick-slide {
   margin: 0 10px;
 }
-.image-slider div {
-  height: 75vh;
-}
+
 .image-slider div img {
   border-radius: 5px;
   border: 3px ridge black;
@@ -257,6 +314,7 @@ button:hover,
   border-radius: 15px;
   margin-top: 10px;
 }
+
 #about .absolute {
   border-radius: 15px;
 }
@@ -267,6 +325,7 @@ button:hover,
   /* 16:9 Aspect Ratio */
   overflow: hidden;
 }
+
 .video-container video {
   position: absolute;
   top: 0;
@@ -279,9 +338,171 @@ button:hover,
   background-image: url("./football-no-lines.png");
 }
 
+#history {
+  padding-bottom: 0;
+}
+
 footer {
   background-color: #000000;
   padding: 20px 0;
   text-align: center;
   color: #cccccc;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+#second-block,
+#first-block {
+  padding: 0 2rem;
+}
+
+.rubizh-logo {
+  display: flex !important;
+  justify-content: flex-end !important;
+}
+
+@media screen and (min-width: 1770px) {
+
+  header{
+    display: flex;
+    justify-content: center;
+  }
+
+  .container.mx-auto.flex.justify-between.items-center{
+    margin: 0%;
+    max-width: 100%;
+   }
+
+  /* навігаційне меню */
+  .container.mx-auto.flex.justify-between.items-center > nav > ul > li > a{
+    /* font-size: 38px; */
+    font-size: 2rem;
+  }
+
+   .container.mx-auto.flex.justify-between.items-center > div.flex.items-center > img{
+    height: 10%;
+    width: 100%;
+    }
+
+  /* назва батальйону */
+  .container.mx-auto.flex.justify-between.items-center > div.flex.items-center > div > p{
+    font-size: 3rem !important;
+    line-height: 3rem !important;
+    }
+  .container.mx-auto.flex.justify-between.items-center > div.flex.items-center > div > h1{
+     font-size: 6.5rem !important;
+     line-height: 3.5rem !important;
+   }
+
+  /* лого бригади */
+  .rubizh-logo {
+    width: 19% ;
+    justify-content: center !important;
+  } 
+   /* лого бригади */
+   .container.mx-auto.flex.justify-between.items-center > a > img{
+    width: 35%;
+
+  }
+  
+  .h2-text{
+    font-size: 7rem !important;
+    line-height: 7.5rem !important;
+  }
+
+  .mt-4
+  {
+    font-size: 2rem !important;
+    line-height: 2.5rem !important;
+  }
+  
+  .px-8{
+    font-size: 1.7rem !important;
+    line-height: 2rem !important;
+  }
+
+  .text-4xl.font-bold.mb-8.text-center.text-gold{
+    font-size: 3rem !important;
+    line-height: 3.5rem !important;
+  }
+
+  .text-4xl.font-bold.text-gold.mb-4{
+    font-size: 3rem !important;
+    line-height: 3.5rem !important;
+  }
+
+  .text-white{
+    font-size: 1.7rem !important;
+    line-height: 1.9rem !important;
+  }
+
+  .text-3xl{
+    font-size: 1.9rem !important;
+    line-height: 1.9rem !important;
+  }
+
+  .container {
+    max-width: 85%;
+}
+
+  .text-lg.text-center.mb-8{
+    font-size: 1.9rem !important;
+    line-height: 1.9rem !important;
+  }
+
+  .text-2xl.font-bold.text-gold.mb-2{
+    font-size: 2rem !important;
+    line-height: 2rem !important;
+  }
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .rubizh-logo {
+    width: 13.5% !important;
+  }
+
+  
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .rubizh-logo {
+    width: 8% !important;
+  }
+}
+
+@media screen and (max-width: 560px) {
+
+  .banner-text h2,
+  .banner-text p {
+    transform: scale(0.8);
+    animation: scale_560 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .rubizh-logo {
+    display: none !important;
+  }
+
+  .text-white {
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  #first-block {
+    padding: 0px !important;
+  }
+
+  #second-block {
+    padding: 0px !important;
+  }
+}
+
+@keyframes scale_560 {
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

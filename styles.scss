@@ -6,7 +6,7 @@ $accent-color: #282A3A;
 $highlight-color: #C69749;
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 body {
-    background-color: $background-color;
+    background-color: #333a48;
     color: $text-color;
     line-height: 1.6;
     margin: 0;
@@ -44,6 +44,31 @@ h3,
 h4 {
     color: $secondary-color;
 }
+#videoPopup {
+    z-index: 1000;
+}
+
+#popupVideo {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+#mobileMenu > ul {
+    padding-top: 10vh !important;
+    margin-bottom: 10vh !important;
+    background-color: black;
+    height: 100vh;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: -10vh !important;
+    box-sizing: content-box;
+}
+.slider_image {
+    aspect-ratio: 7/4;
+}
+
+#closePopup {
+    cursor: pointer;
+}
 
 a {
     color: $highlight-color;
@@ -63,6 +88,8 @@ transform: scale(0.94);
     transform: scale(1);
   }
 }
+
+
 
 .h2-text span {
   display: inline-block;
@@ -254,7 +281,6 @@ button,
     }
 
     div {
-        height: 75vh;
 
         img {
             border-radius: 5px;
@@ -289,6 +315,10 @@ button,
 #vacancies {
     background-image: url("./football-no-lines.png");
 }
+#history {
+    
+    padding-bottom: 0;
+}
 
 footer {
     background-color: $background-color;
@@ -296,3 +326,20 @@ footer {
     text-align: center;
     color: darken($text-color, 20%);
 }
+
+#second-block, #first-block {
+    padding: 0 2rem;
+}
+
+@media screen and (max-width: 560px) {
+    .banner-text h2, .banner-text p {
+        transform: scale(0.8);
+        animation: scale_560 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    }
+}
+
+@keyframes scale_560 {
+    100% {
+      transform: scale(0.8);
+    }
+  }

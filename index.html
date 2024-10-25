@@ -7,56 +7,116 @@
     <title>HIRD Army Recruitment</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TZYH03BKGF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TZYH03BKGF');
+</script>
 </head>
 
-<body class="bg-gray-900 text-white font-sans">
+<body class="text-white font-sans">
     <!-- Header Section -->
-    <header class=" p-4 shadow-lg fixed w-full z-50 glass-background">
+    <header class="p-4 shadow-lg fixed w-full z-50 glass-background">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
-                <img src="logo.png" alt="Бригада Рубіж" class="h-10 mr-4">
-                <h1 class="text-4xl font-extrabold text-gold">HIRD</h1>
+                <img src="logo.png" alt="Бригада Рубіж" class="h-12 ">
+                <div style="display: flex; flex-direction:column;">
+                    <p class="font-extrabold" style="font-size: 1.05rem; line-height: 1.05rem;">Батальйон</p>
+                    <h1 class="text-4xl font-extrabold text-gold" style="line-height: 1.8rem;">HIRD</h1>
+                </div>
             </div>
-            <nav>
+            <nav class="hidden md:block">
                 <ul class="flex items-center space-x-4">
-                    <li><a href="#about" class="text-gray-400 hover:text-gold transition duration-300 font-semibold">Про
-                            нас</a></li>
-                    <li><a href="#units"
-                            class="text-gray-400 hover:text-gold transition duration-300 font-semibold">Підрозділи</a>
-                    </li>
-
-                    <li><a href="#history"
-                            class="text-gray-400 hover:text-gold transition duration-300 font-semibold">Історія</a>
-                    </li>
-                    <li><a href="#vacancies"
-                            class="text-gray-400 hover:text-gold transition duration-300 font-semibold">Вакансії</a>
-                    </li>
-                    <li><a href="#contact"
-                            class="text-gray-400 hover:text-gold transition duration-300 font-semibold">Контакти</a>
-                    </li>
+                    <li><a href="#about" class="text-gray-400 hover:text-gold transition duration-300 font-semibold">Про нас</a></li>
+                    <li><a href="#units" class="text-gray-400 hover:text-gold transition duration-300 font-semibold">Підрозділи</a></li>
+                    <li><a href="#vacancies" class="text-gray-400 hover:text-gold transition duration-300 font-semibold">Вакансії</a></li>
+                    <li><a href="#history" class="text-gray-400 hover:text-gold transition duration-300 font-semibold">Історія</a></li>
+                    <li><a href="#contact" class="text-gray-400 hover:text-gold transition duration-300 font-semibold">Контакти</a></li>
                 </ul>
-
             </nav>
-            <a href="https://rubizh.com/"
-                class="text-gray-400 hover:text-gold transition duration-300 font-semibold rubizh-logo"><img
-                    src="./meterials/logos/BROPP.png" alt="rubizh-logo" width="50px" height="50px"></a>
+            <a href="https://rubizh.com/" class="hidden md:block text-gray-400 hover:text-gold transition duration-700 font-semibold rubizh-logo">
+                <img src="./meterials/logos/BROPP.png" alt="rubizh-logo" width="50px" height="50px">
+            </a>
+
+            <!-- Гамбургер для мобільних пристроїв -->
+            <div class="md:hidden">
+                <button id="hamburger" class="focus:outline-none" style="background-color: transparent; color: #FFFFFF; box-shadow:none;">
+                    <svg class="w-8 h-8 text-white-400 hover:text-gold transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Мобільне меню на весь екран -->
+        <div id="mobileMenu" class="fixed inset-0 bg-[#333a48] text-center py-8 transform -translate-y-full transition-transform duration-500 ease-in-out z-50 hidden">
+            <ul class="space-y-8">
+                <li><a href="#about" class="block text-gray-200 hover:text-gold transition duration-300 text-2xl font-semibold">Про нас</a></li>
+                <li><a href="#units" class="block text-gray-200 hover:text-gold transition duration-300 text-2xl font-semibold">Підрозділи</a></li>
+                <li><a href="#vacancies" class="block text-gray-200 hover:text-gold transition duration-300 text-2xl font-semibold">Вакансії</a></li>
+                <li><a href="#history" class="block text-gray-200 hover:text-gold transition duration-300 text-2xl font-semibold">Історія</a></li>
+                <li><a href="#contact" class="block text-gray-200 hover:text-gold transition duration-300 text-2xl font-semibold">Контакти</a></li>
+            </ul>
+            <a href="https://rubizh.com/" class="block text-gray-200 hover:text-gold transition duration-300 font-semibold mt-12">
+                <img src="./meterials/logos/BROPP.png" alt="rubizh-logo" class="mx-auto" width="60px" height="60px">
+            </a>
         </div>
     </header>
 
+    <script>
+        // Логіка для відкриття/закриття мобільного меню
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuLinks = document.querySelectorAll('#mobileMenu a'); // Вибираємо всі посилання всередині меню
+        let isMenuOpen = false;
+    
+        const toggleMenu = () => {
+            if (isMenuOpen) {
+                mobileMenu.classList.add('-translate-y-full');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden'); // Додаємо hidden після анімації закриття
+                }, 700); // Відповідно до тривалості анімації (700 мс)
+                document.body.style.overflow = 'auto'; // Включаємо прокрутку
+            } else {
+                mobileMenu.classList.remove('hidden'); // Спочатку знімаємо hidden, щоб меню могло плавно з'являтися
+                setTimeout(() => {
+                    mobileMenu.classList.remove('-translate-y-full');
+                }, 10); // Додаємо невелику затримку для плавної анімації
+                document.body.style.overflow = 'hidden'; // Вимикаємо прокрутку
+            }
+            isMenuOpen = !isMenuOpen;
+        };
+    
+        // Обробник для відкриття/закриття меню при натисканні на гамбургер
+        hamburger.addEventListener('click', toggleMenu);
+    
+        // Обробники для закриття меню при натисканні на посилання
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (isMenuOpen) {
+                    toggleMenu(); // Закриваємо меню після кліку на посилання
+                }
+            });
+        });
+    </script>
+    
+    
     <!-- Hero Section with Background Video -->
     <section class="hero-section relative h-screen">
         <!-- Фонове відео -->
         <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
-            <source src="./GX01001.webm" type="video/webm">
+            <source src="./GX010016.webm" type="video/webm">
             Ваш браузер не підтримує відео тег.
         </video>
 
@@ -70,7 +130,7 @@
                 <span>Приєднуйся</span> <span>до</span> <span>HIRD</span>
             </h2>
             <p class="mt-4 text-2xl">2 батальйон оперативного призначення</p>
-            <p class="mt-4 text-2xl">Бригади “Рубіж” Національної гвардії України</p>
+            <p class="mt-4 text-2xl">Бригади “Рубіж” НГУ</p>
             <a href="https://forms.gle/jBt5FB63GMxcthiw7"
                 class="mt-8 inline-block text-black px-8 py-4 rounded-full text-xl font-semibold shadow-lg glass-background_button">Заповнити
                 анкету</a>
@@ -110,23 +170,38 @@
             </div>
 
             <!-- Image Slider -->
-            <div class="image-slider max-w-full overflow-hidden mt-8">
-                <div><img src="./meterials/foto/IMG_6217.jpg" alt="About Image 1" class="w-full h-full object-cover">
+            <div class="slider_image image-slider max-w-full overflow-hidden mt-8">
+                <div><img src="./s2.jpg" alt="About Image 1" class="w-full h-full object-cover">
                 </div>
-                <div><img src="./meterials/foto/IMG_8365.jpg" alt="About Image 2" class="w-full h-full object-cover">
+                <div><img src="./s1.jpg" alt="About Image 2" class="w-full h-full object-cover">
                 </div>
-                <div><img src="./meterials/foto/IMG_6605.jpg" alt="About Image 3" class="w-full h-full object-cover">
+                <div><img src="./s3.jpg" alt="About Image 3" class="w-full h-full object-cover">
+                </div>
+                <div><img src="./s4.jpg" alt="About Image 1" class="w-full h-full object-cover">
+                </div>
+                <div><img src="./s5.jpg" alt="About Image 2" class="w-full h-full object-cover">
+                </div>
+                <div><img src="./s6.jpg" alt="About Image 3" class="w-full h-full object-cover">
+                </div>
+                <div><img src="./s7.jpg" alt="About Image 1" class="w-full h-full object-cover">
+                </div>
+                <div><img src="./s8.jpg" alt="About Image 2" class="w-full h-full object-cover">
+                </div>
+                <div><img src="./s9.jpg" alt="About Image 3" class="w-full h-full object-cover">
+                </div>
+                <div><img src="./s10.jpg" alt="About Image 1" class="w-full h-full object-cover">
                 </div>
             </div>
 
             <!-- Другий блок тексту у дві колонки -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 opacity-0" id="second-block">
+            <div class="text-lg leading-relaxed mb-6 text-white" id="second-block">
                 <div class="text-lg leading-relaxed text-white">
+                    <h2 class="text-center" ><br>
+                        БОЙОВИЙ ШЛЯХ</h2>
                     <p>
-                        <span class="text-center">БОЙОВИЙ ШЛЯХ</span>
                         <br>
                         2 батальйон оперативного призначення HIRD входить до складу Бригади швидкого реагування
-                        Національної гвардії України «Рубіж» - першоЇ в Україні бригади заснованої створеної за
+                        Національної гвардії України «Рубіж» - першоЇ в Україні бригади заснованої за
                         стандартами НАТО.
                         <br>
                         2 батальйон оперативного призначення був створений у 2015 році. Виконував бойові завдання в АТО
@@ -144,23 +219,6 @@
                         десятки російських військових.
                     </p>
                 </div>
-                <div class="text-lg leading-relaxed text-white">
-                    <p>
-                        <span class="text-center">Управління батальйону</span>
-                        <br>
-                        Бойові офіцери які пройшли всі ланки військової служби і безпосередньо
-                        приймали участь у боях що нівелює розрив розуміння між особовим складом і командирами при
-                        виконанні завдань.
-                        <br>
-                        Командир батальйону підполковник Дмитро Лисенко - досвідчений офіцер, який воює з 2014 року
-                        <br>
-                        “При стрімкому технологічному розвитку війни - ми теж розвиваємось, постійно нарощуючи
-                        можливості. Наші підрозділи вже мають власні напрацювання, які дають відмінний результат на полі
-                        бою. Військова справа - це постійне широке вдосконалення і наполеглива праця злагодженого
-                        колективу. Якщо ти вважаєш так само - чекаємо в наших рядах.”
-
-                    </p>
-                </div>
             </div>
         </div>
     </section>
@@ -174,30 +232,60 @@
         </div>
     </section>
 
-    <!-- Units Section -->
-    <section id="units" class="container mx-auto py-24 px-4"
-        style="background-image: url('./meterials/_MG_0468.jpg'); background-repeat: no-repeat; background-size: cover;">
 
-        <h2 class="text-4xl font-bold mb-8 text-center text-gold">Підрозділи</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="unit-card glass-background p-6 rounded-lg shadow-md">
+    <!-- Підрозділи -->
+    <section id="units" class="container mx-auto py-24 px-4"
+    style="background-image: url('./meterials/_MG_0468.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+    <h2 class="text-4xl font-bold mb-8 text-center text-gold">Підрозділи</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div class="unit-card glass-background p-6 rounded-lg shadow-md cursor-pointer" data-video="video1">
                 <h3 class="text-2xl font-bold text-gold mb-2">Піхота</h3>
-                <p>Основна ударна сила батальйону, оснащена сучасною зброєю та амуніцією.</p>
+                <p>Основна сила батальйону. Піхотинці виконують бойові завдання безпосередньо на лінії зіткнення: обороняють власні позиції, захоплюють та утримують позиції противника, знищують ворога в ближньому бою. Основні спеціальності нашої піхоти: марксмен, кулеметник, гранатометник. </p>
             </div>
-            <div class="unit-card glass-background p-6 rounded-lg shadow-md">
+            <div class="unit-card glass-background p-6 rounded-lg shadow-md cursor-pointer" data-video="video2">
                 <h3 class="text-2xl font-bold text-gold mb-2">Розвідка</h3>
-                <p>Проведення розвідки та збору інформації про противника.</p>
+                <p>Найбільш досвідчені та різносторонньо підготовлені бійці, здатні заходити за лінію зіткнення, щоб завдати несподіваного удару по позиціях росіян, взяти полонених, захопити важливу інформацію про плани ворога.</p>
             </div>
-            <div class="unit-card glass-background p-6 rounded-lg shadow-md">
+            <div class="unit-card glass-background p-6 rounded-lg shadow-md cursor-pointer" data-video="video3">
                 <h3 class="text-2xl font-bold text-gold mb-2">БПЛА</h3>
-                <p>Аеророзвідка та підтримка наземних операцій.</p>
+                <p>Бійці підрозділу розвідують позиції противника, спостерігають за полем бою, виявляють та знищують російських військових і техніку. З ними тісно взаємодіють технічні фахівці, які не лише вдосконалюють існуючі зразки безпілотних систем, а й створюють власні розробки.</p>
             </div>
-            <div class="unit-card glass-background p-6 rounded-lg shadow-md">
+            <div class="unit-card glass-background p-6 rounded-lg shadow-md cursor-pointer" data-video="video4">
                 <h3 class="text-2xl font-bold text-gold mb-2">Рота вогневої підтримки</h3>
-                <p>Забезпечення вогневої підтримки для основних підрозділів батальйону.</p>
+                <p>Головне завдання роти вогневої підтримки - прикриття піхотних підрозділів на передньому краї. Вражаючи техніку та особовий склад противника на підступах до позицій, оператори великокаліберних кулеметів, автоматичних гранатометів і протитанкових ракетних комплексів не дають наблизитися ворогу на відстань ближнього бою.</p>
             </div>
+            <div class="unit-card glass-background p-6 rounded-lg shadow-md cursor-pointer" data-video="video5">
+                <h3 class="text-2xl font-bold text-gold mb-2">Мінометники</h3>
+                <p>Артилеристи батальйону прикривають бойові підрозділи на передовій з другої лінії. Працюють по позиціях і накопиченню російських сил, вражають техніку та вогневі позиції росіян на великих відстанях. Точними потужними ударами зменшують наступальний потенціал ворога.</p>
+            </div>
+            <div class="unit-card glass-background p-6 rounded-lg shadow-md cursor-pointer" data-video="video6">
+                <h3 class="text-2xl font-bold text-gold mb-2">Інженерно-Саперний взвод</h3>
+                <p>Бійці підрозділу захищають наші позиції, встановлюючи вибухові пастки на шляху можливого пересування ворожих сил. Перевіряють наявність вибухових об’єктів та розміновують місцевість для безпечного руху наших військ.</p>
+            </div>
+            <div class="unit-card glass-background p-6 rounded-lg shadow-md cursor-pointer" data-video="video7">
+                <h3 class="text-2xl font-bold text-gold mb-2">Зв'язківці</h3>
+                <p>Забезпечують безперебійну передачу інформації, що необхідно для координації дій усіх інших підрозділів. Також зв’язківці батальйону відповідають за роботу засобів радіоелектронної боротьби, захищаючи інші бойові підрозділи від ворожих дронів.</p>
+            </div>
+            <div class="unit-card glass-background p-6 rounded-lg shadow-md cursor-pointer" data-video="video8">
+                <h3 class="text-2xl font-bold text-gold mb-2">ВМТЗ</h3>
+                <p>Підрозділи матеріально-технічного забезпечення та технічного обслуговування виконують широке коло задач, необхідних для підтримки боєздатності батальйону: підвіз боєприпасів, ремонт автомобілів та бронетехніки, забезпечення продуктами та приготування їжі, забезпечення теплом та електрикою, перевезення техніки та особового складу.</p>
+            </div>
+            
         </div>
     </section>
+
+    <!-- Попап для відео -->
+    <div id="videoPopup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 hidden">
+        <div class="relative glass-background p-8 rounded-lg shadow-lg max-w-lg w-full">
+            <span style="display: none;" id="closePopup" class="cursor-pointer text-2xl text-gray-600 absolute top-4 right-4">&times;</span>
+            <video id="popupVideo" class="rounded-md shadow-lg" width="100%" controls>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
 
     <!-- Vacancies Section -->
     <section id="vacancies" class="bg-gray-800 py-24 px-4">
@@ -218,13 +306,9 @@
         <div class="bg-black bg-opacity-70 p-8 rounded-lg">
             <div class="container mx-auto">
                 <h2 class="text-4xl font-bold text-gold mb-4">Історія</h2>
-                <p class="text-lg leading-relaxed text-white">
-                    2 батальйон оперативного призначення HIRD входить до складу Бригади швидкого реагування Національної
-                    гвардії України «Рубіж»...
-                </p>
                 <!-- Video Section -->
                 <div class="mt-8" style="display: flex; justify-content: center; align-items: center;">
-                    <iframe style="height: 70vh; aspect-ratio: 3 / 2; width: auto;" class="w-full rounded-lg"
+                    <iframe style="height: auto; aspect-ratio: 7 / 4; width: 90vw;" class="w-full rounded-lg"
                         width="1263" height="480" src="https://www.youtube.com/embed/9hFlcOwTN08"
                         title="7 місяців ЖОРСТОКОЇ ОБОРОНИ на Луганщині, ротація батальйону HIRD" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -235,14 +319,14 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="container mx-auto py-24 px-4" style="padding-top: 0;">
+    <section id="contact" class="container mx-auto py-24 px-4">
         <h2 class="text-4xl font-bold mb-8 text-center text-gold">Контакти</h2>
         <div class="text-center">
-            <p>Instagram: <a href="https://www.instagram.com/2bop_bshr/" class="text-gold hover:underline">2bop_bshr</a>
+            <p>Instagram: <a href="https://www.instagram.com/2bop.hird" class="text-gold hover:underline">2bop.hird</a>
             </p>
-            <p>Facebook: <a href="https://www.facebook.com/2bopRapidReactionBrigade/"
-                    class="text-gold hover:underline">2bopRapidReactionBrigade</a></p>
-            <p>Email: <a href="mailto:2bop.rrb@gmail.com" class="text-gold hover:underline">2bop.rrb@gmail.com</a></p>
+            <p>Facebook: <a href="https://www.facebook.com/2bop.hird"
+                    class="text-gold hover:underline">2bop.hird</a></p>
+            <p>Email: <a href="2bop.hird@gmail.com" class="text-gold hover:underline">2bop.hird@gmail.com</a></p>
         </div>
     </section>
 
@@ -267,6 +351,52 @@
                 adaptiveHeight: false // Вимкнено, щоб використовувати однакову висоту
             });
         });
+
+        document.addEventListener('DOMContentLoaded', function () {
+    const unitCards = document.querySelectorAll('.unit-card');
+    const videoPopup = document.getElementById('videoPopup');
+    const popupVideo = document.getElementById('popupVideo');
+    const closePopup = document.getElementById('closePopup');
+
+    // Відео для кожного підрозділу
+    const videoSources = {
+        video1: './pihota.mp4',
+        video2: './rozvidka.mp4',
+        video3: './bpla.mp4',
+        video4: './rvp.mp4',
+        video5: './mortar.mp4',
+        video6: './sapery.mp4',
+        video7: './zviazok.MOV',
+        video8: './MTZ.mp4',
+    };
+
+    // Відкриття попапа з відповідним відео
+    unitCards.forEach(card => {
+        card.addEventListener('click', function () {
+            const videoId = card.getAttribute('data-video');
+            popupVideo.src = videoSources[videoId];
+            videoPopup.classList.remove('hidden');
+        });
+    });
+
+    // Закриття попапа при натисканні на хрестик
+    closePopup.addEventListener('click', function () {
+        closeVideoPopup();
+    });
+
+    // Закриття попапа при натисканні поза вікном
+    videoPopup.addEventListener('click', function (e) {
+        if (e.target === videoPopup) {
+            closeVideoPopup();
+        }
+    });
+
+    function closeVideoPopup() {
+        videoPopup.classList.add('hidden');
+        popupVideo.src = ''; // Очищення відео після закриття
+    }
+});
+
     </script>
     <script src="script.js"></script>
 </body>
